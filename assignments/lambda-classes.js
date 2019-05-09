@@ -29,6 +29,12 @@ class Instructor extends Person {
 			console.log(`${student.name} receives a perfect score on ${subject}`);
 		}
 	}
+
+	giveGrade(student) {
+		if(student instanceof Student) {
+			student.grade += (Math.random() - 0.5) * 40; // Adds number between -20 and 20 to grade
+		}
+	}
 }
 
 class Student extends Person {
@@ -36,7 +42,9 @@ class Student extends Person {
 		super(arguments[0]);
 		this.previousBackground = previousBackground;
 		this.className = className;
-		this.favSubjects = favSubjects;		
+		this.favSubjects = favSubjects;
+		this.grade = Math.random() * 100;
+		this.graduated = false;
 	}
 	
 	listsSubjects() {
@@ -49,6 +57,19 @@ class Student extends Person {
 
 	sprintChallenge(subject) {
 		console.log(`${this.name} has begun sprint challenge on ${subject}`);
+	}
+
+	graduate() {
+		if(this.graduated) {
+			console.log(`${this.name} already graduated!`);
+			return;
+		}
+		if(this.grade > 70) {
+			this.graduated = true;
+			console.log(`${this.name} just graduated!`);
+		} else {
+			console.log(`${this.name} needs ${70 - this.grade}% more on their grade to graduate!`);
+		}
 	}
 }
 
