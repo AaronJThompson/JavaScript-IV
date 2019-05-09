@@ -13,7 +13,7 @@ class Person {
 }
 
 class Instructor extends Person {
-	constructor({specialty, favLanguage, catchPhrase}) {
+	constructor({name, age, location, gender, specialty, favLanguage, catchPhrase}) {
 		super(arguments[0]); //Pass whole object argument to Person constructor
 		this.specialty = specialty;
 		this.favLanguage = favLanguage;
@@ -32,7 +32,7 @@ class Instructor extends Person {
 }
 
 class Student extends Person {
-	constructor({previousBackground, className, favSubjects}) {
+	constructor({name, age, location, gender, previousBackground, className, favSubjects}) {
 		super(arguments[0]);
 		this.previousBackground = previousBackground;
 		this.className = className;
@@ -53,7 +53,7 @@ class Student extends Person {
 }
 
 class ProjectManager extends Instructor {
-	constructor({gradClassName, favInstructor}) {
+	constructor({name, age, location, gender, specialty, favLanguage, catchPhrase, gradClassName, favInstructor}) {
 		super(arguments[0]);
 		this.gradClassName = gradClassName;
 		this.favInstructor = favInstructor;
