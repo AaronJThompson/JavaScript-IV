@@ -23,7 +23,7 @@ class Instructor extends Person {
 	demo(subject) {
 		console.log(`Today we are learning about ${subject}`);
 	}
-	
+
 	grade(student, subject) {
 		if(student instanceof Student){
 			console.log(`${student.name} receives a perfect score on ${subject}`);
@@ -31,6 +31,25 @@ class Instructor extends Person {
 	}
 }
 
-class Student extends Person {}
+class Student extends Person {
+	constructor({previousBackground, className, favSubjects}) {
+		super(arguments[0]);
+		this.previousBackground = previousBackground;
+		this.className = className;
+		this.favSubjects = favSubjects;		
+	}
+	
+	listsSubjects() {
+		this.favSubjects.forEach(item => console.log(item));
+	}
+
+	PRAssignment(subject) {
+		console.log(`${this.name} has submitted a PR for ${subject}`);
+	}
+
+	sprintChallenge(subject) {
+		console.log(`${this.name} has begun sprint challenge on ${subject}`);
+	}
+}
 
 class ProjectManager extends Instructor {}
