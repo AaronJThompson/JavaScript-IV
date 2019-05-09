@@ -89,3 +89,23 @@ let josh = new Instructor({
 	favLanguage: "Less",
 	catchPhrase: "Hmmm, something's up!",
 })
+
+let aaron = new Student({
+	name: "Aaron Thompson",
+	age: 20,
+	location: "England",
+	gender: 'M',
+	previousBackground: "Computer Science, Advanced Mathematics",
+	className: "WEBEU2",
+	favSubjects: ["Preproccessing", "CSS", "Javascript"],
+})
+
+let haja = new Student({
+	name: "Haja Andriamaro",
+	age: 26,
+	location: "France",
+	gender: 'M',
+	previousBackground: "CTO, Business developemnt",
+	className: "WEBEU2",
+	favSubjects: ["HTML", "CSS", "Javascript"],
+})
