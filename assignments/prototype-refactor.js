@@ -163,10 +163,7 @@ class CharacterStats extends GameObject {
         }
     }
   
-    function Villain(args){
-      Humanoid.call(this, args);
-    }
-    Villain.prototype = Object.create(Hero.prototype);
+    class Villain extends Hero {};
   
     const aaron = new Hero({
       createdAt: new Date(),
