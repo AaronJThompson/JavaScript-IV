@@ -109,3 +109,27 @@ let haja = new Student({
 	className: "WEBEU2",
 	favSubjects: ["HTML", "CSS", "Javascript"],
 })
+
+let sorin = new ProjectManager({
+	name: "Sorin Chris",
+	age: 23,
+	location: "Romania",
+	gender: 'M',
+	specialty: "Web Development",
+	favLanguage: "Java",
+	catchPhrase: "Do the forms!",
+	gradClassName: "WEBEU1",
+	favInstructor: "Josh Knell",
+})
+
+let maxime = new ProjectManager({
+	name: "Maxime Salomon",
+	age: 23,
+	gender: 'M',
+	location: "Paris",
+	specialty: "After Hours",
+	favLanguage: "CSS",
+	catchPhrase: "Do the form!",
+	gradClassName: "WEBEU1",
+	favInstructor: "Gabe Cabrejas",
+})
