@@ -52,4 +52,20 @@ class Student extends Person {
 	}
 }
 
-class ProjectManager extends Instructor {}
+class ProjectManager extends Instructor {
+	constructor({gradClassName, favInstructor}) {
+		super(arguments[0]);
+		this.gradClassName = gradClassName;
+		this.favInstructor = favInstructor;
+	}
+
+	standUp(channel) {
+		console.log(`${this.name} announces to ${channel}, @channel standy times!`);
+	}
+
+	debugsCode(student, subject) {
+		if(student instanceof Student) {
+			console.log(`${this.name} debugs ${student.name}'s code on ${subject}`);
+		}
+	}
+}
