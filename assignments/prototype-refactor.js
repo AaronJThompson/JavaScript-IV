@@ -152,17 +152,15 @@ class CharacterStats extends GameObject {
     // * Give the Hero and Villains different methods that could be used to remove health points from objects which could result in destruction if health gets to 0 or drops below 0;
     // * Create two new objects, one a villain and one a hero and fight it out with methods!
   
-    function Hero(args){
-      Humanoid.call(this, args);
-    }
-    Hero.prototype = Object.create(Humanoid.prototype);
-    Hero.prototype.attack = function(target, dmg){
-      target.healthPoints -= dmg;
-      if (target.healthPoints <= 0){
-        target.destroy();
-        return `${this.name} destroyed ${target.name}`
-      }
-      return `${this.name} hit ${target.name} for ${dmg} damage`
+    class Hero extends Humanoid {
+        attack(target, dmg) {
+            target.healthPoints -= dmg;
+            if (target.healthPoints <= 0){
+              target.destroy();
+              return `${this.name} destroyed ${target.name}`
+            }
+            return `${this.name} hit ${target.name} for ${dmg} damage`
+        }
     }
   
     function Villain(args){
