@@ -154,3 +154,14 @@ let maxime = new ProjectManager({
 	gradClassName: "WEBEU1",
 	favInstructor: "Gabe Cabrejas",
 })
+
+haja.speak();
+gabe.demo("Javascript I");
+josh.grade(aaron, "Preprocessing I");
+aaron.listsSubjects();
+haja.PRAssignment("Javascript III");
+aaron.sprintChallenge("Preprocessing");
+sorin.standUp("webeu2_sorin");
+maxime.debugsCode(aaron, "User interface II");
+sorin.giveGrade(aaron);
+aaron.graduate();
