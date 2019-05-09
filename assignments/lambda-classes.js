@@ -69,3 +69,23 @@ class ProjectManager extends Instructor {
 		}
 	}
 }
+
+let gabe = new Instructor({
+	name: "Gabriel Cabrejas",
+	age: 25,
+	location: "Spain",
+	gender: 'M',
+	specialty: "Web Development",
+	favLanguage: "Javascript",
+	catchPhrase: "I HATE CLASSES IN JAVASCRIPT!",
+})
+
+let josh = new Instructor({
+	name: "Josh Knell",
+	age: 24,
+	location: "USA",
+	gender: 'M',
+	specialty: "Web Development",
+	favLanguage: "Less",
+	catchPhrase: "Hmmm, something's up!",
+})
