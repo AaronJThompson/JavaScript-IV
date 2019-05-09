@@ -12,7 +12,24 @@ class Person {
   }
 }
 
-class Instructor extends Person {}
+class Instructor extends Person {
+	constructor({specialty, favLanguage, catchPhrase}) {
+		super(arguments[0]); //Pass whole object argument to Person constructor
+		this.specialty = specialty;
+		this.favLanguage = favLanguage;
+		this.catchPhrase = catchPhrase;
+	}
+
+	demo(subject) {
+		console.log(`Today we are learning about ${subject}`);
+	}
+	
+	grade(student, subject) {
+		if(student instanceof Student){
+			console.log(`${student.name} receives a perfect score on ${subject}`);
+		}
+	}
+}
 
 class Student extends Person {}
 
